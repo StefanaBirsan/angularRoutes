@@ -1,0 +1,41 @@
+<!-- <button (click)="callService()">Http request</button> -->
+<div>
+  <label for="text" name="text">Filter users</label>
+  <input id="text" type="text" [(ngModel)]="text" />
+  <button (click)="filter()">Check if the names inlude a text</button>
+  <div class="cardContainer">
+    <div
+      class="card"
+      *ngFor="let data of arrayOfData"
+      [ngClass]="{ hidden: filtered }"
+    >
+      <p>Name: {{ data.name }}</p>
+      <p>Username: {{ data.username }}</p>
+
+      <button
+        (click)="modify(data)"
+        [routerLink]="['ModifyUser']"
+        routerLinkActive="bgColor"
+      >
+        Modify
+      </button>
+      <button (click)="delete(data)">Delete</button>
+    </div>
+  </div>
+  <div>
+    <div *ngIf="filtered" class="cardContainer">
+      <div class="card" *ngFor="let data of resultAfterFiltering">
+        <p>Name: {{ data.name }}</p>
+        <p>Username: {{ data.username }}</p>
+        <button
+          (click)="modify(data)"
+          [routerLink]="['ModifyUser']"
+          routerLinkActive="bgColor"
+        >
+          Modify
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

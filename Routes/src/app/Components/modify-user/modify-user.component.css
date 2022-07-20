@@ -1,0 +1,63 @@
+* {
+  font-family: "Fjalla One", sans-serif;
+}
+.modify {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card {
+  box-shadow: 5px 5px 5px 5px rgb(234, 233, 233);
+  padding: 2rem;
+  width: 200px;
+}
+button {
+  padding: 1rem 2rem;
+  background-color: white;
+  color: olive;
+  border: 2px solid olive;
+  margin-top: 2rem;
+
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+button:hover {
+  background-color: olive;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+/* h3 {
+    margin-bottom: 4rem;
+  } */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+input {
+  padding: 0.5rem 2rem;
+  margin: 0rem 1rem;
+}
+label {
+  width: 200px;
+}
+form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.succesfullMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: olive;
+}
+span {
+  color: black;
+  font-size: 2rem;
+}

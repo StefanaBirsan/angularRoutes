@@ -1,0 +1,48 @@
+<div class="modify">
+  <h3>Let's modify an user, shall me?</h3>
+  <form>
+    <div>
+      <div><label for="name" id="name">Modify Name:</label></div>
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="theObjectThatIWantToModify.name"
+      />
+    </div>
+    <div>
+      <div>
+        <label for="username" id="username">Modify Username:</label>
+      </div>
+
+      <input
+        type="text"
+        name="username"
+        [(ngModel)]="theObjectThatIWantToModify.username"
+      />
+    </div>
+
+    <div>
+      <div><label for="phone" id="phone"> Modify Phone:</label></div>
+      <input
+        type="text"
+        name="phone"
+        [(ngModel)]="theObjectThatIWantToModify.phone"
+      />
+    </div>
+
+    <div>
+      <div><label for="website" id="website"> Modify Website:</label></div>
+      <input
+        type="text"
+        name="website"
+        [(ngModel)]="theObjectThatIWantToModify.website"
+      />
+    </div>
+
+    <button type="button" (click)="saveChanges()">Save the changes!</button>
+  </form>
+  <!--exercice no.6 Display a succes text and remove it after few seconds-->
+  <div class="succesfullMessage" *ngIf="visible">
+    <p><span>Yaay!</span> You modified the user with success!</p>
+  </div>
+</div>

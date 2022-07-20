@@ -1,0 +1,19 @@
+<div class="header">
+  <h4 class="header-link" [routerLink]="['Home']" routerLinkActive="bgColor">
+    HOME
+  </h4>
+  <h4 class="header-link" [routerLink]="['Users']" routerLinkActive="bgColor">
+    USERS
+  </h4>
+  <h4
+    class="header-link"
+    [routerLink]="['ModifyUser']"
+    routerLinkActive="bgColor"
+  >
+    MODIFY PAGE
+  </h4>
+</div>
+<div class="errorDiv" *ngIf="visibleError">{{ errore.message }}</div>
+<div class="successDiv" *ngIf="visibleSuccess">{{ success }}</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,41 @@
+* {
+  font-family: "Fjalla One", sans-serif;
+}
+button {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: olive;
+  border: 2px solid olive;
+  margin: 0rem 2rem;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+button:hover {
+  background-color: olive;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px 8px rgb(248, 246, 246);
+  padding: 2rem;
+  max-width: 200px;
+  margin: 2rem;
+}
+label {
+  margin: 0rem 1rem;
+}
+input {
+  padding: 0.5rem 2rem;
+}
+.hidden {
+  display: none;
+}
+.cardContainer {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+}
