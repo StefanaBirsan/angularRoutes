@@ -6,6 +6,10 @@ import { ModifyUserComponent } from './Components/modify-user/modify-user.compon
 
 const routes: Routes = [
   {
+    path: '',
+    component: HomeComponent,
+  },
+  {
     path: 'Home',
     component: HomeComponent,
   },
