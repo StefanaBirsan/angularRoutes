@@ -1,15 +1,144 @@
 * {
   font-family: "Fjalla One", sans-serif;
 }
-.description {
-  margin-top: 5rem;
 
+.container {
+  height: 50vh;
+
+  margin-top: 0rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
-h2 {
-  color: rgb(71, 70, 70);
+.containerDescription {
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+}
+.containerDescription div {
+  margin: 0rem 1rem;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.containerDescription #text {
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+span {
+  color: olive;
+}
+button {
+  padding: 1rem 2rem;
+  background-color: white;
+  color: olive;
+  border: 2px solid olive;
+  margin-top: 1rem;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+button:hover {
+  background-color: olive;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    height: 50vh;
+    margin: 0rem 1rem;
+  }
+  .containerDescription {
+    height: 50vh;
+  }
+  .containerDescription div {
+    width: 200px;
+  }
+  .containerDescription h3 {
+    font-size: 1rem;
+  }
+  .containerDescription button {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+  }
+  .containerDescription img {
+    height: 300px;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .containerDescription div {
+    width: 150px;
+  }
+  .containerDescription h3 {
+    font-size: 0.8rem;
+  }
+  .containerDescription button {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+  }
+  .containerDescription img {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .container {
+    margin: 0rem 2rem;
+  }
+  .containerDescription {
+    margin: 0rem 2rem;
+  }
+  .container h1 {
+    font-size: 1rem;
+  }
+  .containerDescription div {
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerDescription h3 {
+    font-size: 0.7rem;
+  }
+  .containerDescription button {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.5rem;
+  }
+  .containerDescription img {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container {
+    width: 100%;
+    margin: 1rem;
+  }
+  .containerDescription {
+    width: 100%;
+    margin: 0.5rem;
+  }
+  .container h1 {
+    font-size: 1.5rem;
+  }
+  .containerDescription div {
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerDescription h3 {
+    font-size: 0.5rem;
+  }
+  .containerDescription button {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.5rem;
+  }
+  .containerDescription img {
+    height: 150px;
+    width: 150px;
+  }
 }

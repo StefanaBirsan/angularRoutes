@@ -39,3 +39,9 @@ input {
   display: grid;
   grid-template-columns: 300px 300px 300px 300px;
 }
+@media screen and (max-width: 680px) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 600px;
+  }
+}

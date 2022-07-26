@@ -25,19 +25,16 @@ export class UsersComponent implements OnInit {
     if (this.theObjectThatisModified) {
       this.theObjectThatisModified = this.jsonService.modifyData;
       this.arrayOfData.push(this.theObjectThatisModified);
-      console.log(this.arrayOfData);
-    } else console.log('There is no value yet.');
+    }
   }
 
   updatedataJSONArrayAfterDelete() {
     this.objectToDelete = this.jsonService.deleteData;
-    console.log(this.arrayOfData.indexOf(this.objectToDelete));
+
     this.arrayOfData.splice(this.arrayOfData.indexOf(this.objectToDelete), 1);
     this.arrayOfData.filter((item: any) => item.id != this.objectToDelete.id);
-    console.log(this.arrayOfData);
   }
   modify(data: any) {
-    console.log(data);
     this.jsonService.setData(data);
     this.updatedataJSONArray();
   }
@@ -54,22 +51,17 @@ export class UsersComponent implements OnInit {
       if (this.safeDelete) {
         this.jsonService.setDataToDelete(data);
         this.updatedataJSONArrayAfterDelete();
-        // console.log(data);
-        // console.log(this.jsonService.deleteData);
-        // console.log(data.id);
       }
       this.safeDelete = false;
     }
   }
 
   filter() {
-    console.log(this.arrayOfData);
     this.filtered = true;
-    // return this.dataJSON.filter((item: any) => item.name.includes(this.text));
+
     this.resultAfterFiltering = this.arrayOfData.filter((item: any) =>
-      item.name.includes(this.text)
+      item.name.toLowerCase().includes(this.text.toLowerCase())
     );
-    console.log(this.resultAfterFiltering);
   }
 
   constructor(private jsonService: JsonServiceService) {}

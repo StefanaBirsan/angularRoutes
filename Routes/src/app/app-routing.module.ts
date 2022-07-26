@@ -17,6 +17,11 @@ const routes: Routes = [
     path: 'Users',
     component: UsersComponent,
   },
+  {
+    path: 'Home/Users',
+    redirectTo: 'Users',
+    pathMatch: 'full',
+  },
 
   {
     path: 'ModifyUser',
@@ -25,6 +30,11 @@ const routes: Routes = [
   {
     path: 'Users/ModifyUser',
     redirectTo: 'ModifyUser',
+    pathMatch: 'full',
+  },
+  {
+    path: 'ModifyUser/Users',
+    redirectTo: 'Users',
     pathMatch: 'full',
   },
 ];

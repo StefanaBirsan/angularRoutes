@@ -39,7 +39,12 @@
       />
     </div>
 
-    <button type="button" (click)="saveChanges()">Save the changes!</button>
+    <div class="buttons">
+      <button type="button" (click)="saveChanges()">Save the changes!</button>
+      <button id="back" [routerLink]="['Users']">
+        Go back to the modified list of users!
+      </button>
+    </div>
   </form>
   <!--exercice no.6 Display a succes text and remove it after few seconds-->
   <div class="succesfullMessage" *ngIf="visible">
